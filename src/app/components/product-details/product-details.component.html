@@ -1,0 +1,71 @@
+<div class="home-container">
+
+    <div class="container">
+    
+        <app-navbar></app-navbar>
+    
+    </div>
+
+    <!-- single product details -->
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="{{ product.imageUrl }}" id="product-img" width="100%">
+
+                <div class="small-img-row">
+                    <div class="small-img-col" *ngFor="let selectedImg of smallImages; let i = index">
+                        <img src="{{ selectedImg }}" class="small-img" width="100%" (click)="changeProductImage(i)">
+                      </div>
+                </div>
+
+            </div>
+            <div class="col-2">
+                <p>Home / Bags</p>
+                <h1>{{product.name}}</h1>
+                <h4>{{product.unitPrice | currency:'USD'}}</h4>
+                <select name="" id="">
+                    <option value="">Select color</option>
+                    <option value="">Orange</option>
+                    <option value="">Pink</option>
+                    <option value="">Brown</option>
+                    <option value="">Beige</option>
+                </select>
+                
+                <a class="btn" (click)="addToCart()">Add To Cart</a>
+
+                <h3>Product Details <span class="material-symbols-outlined details">format_indent_increase</span></h3>
+                <br>
+                <p>{{product.description}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--title-->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p>View More</p>
+        </div>
+    </div>
+
+    <!--products-->
+    <div class="small-container">
+        
+        <div class="row">
+            <div class="col-4" *ngFor="let product of products">
+                <a routerLink="/product-details"><img src="{{ product.imageUrl }}" id="product-img" width="100%"></a>
+                <a routerLink="/product-details"><h4>{{product.name}}</h4></a>
+                <div class="rating">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+                <p>{{product.unitPrice | currency:'USD'}}</p>
+                <a class="btn" (click)="addToCart()">Add To Cart</a>
+            </div>
+    </div>
+
+</div>

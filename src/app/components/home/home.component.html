@@ -1,0 +1,160 @@
+<div class="home-container">
+
+    <div class="header">
+
+        <div class="container">
+            <app-navbar></app-navbar>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Give Your Wardrobe<br> A new Style!</h1>
+                    <p>At shopBag, we understand that success in fashion is an ongoing journey,<br> just like in life. 
+                        Elevate your style with our curated collection of chic and<br> functional bags 
+                        that blend seamlessly into your everyday routine.</p>
+                        <a routerLink="/products" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="../assets/images/products/bags.png" alt="img1">
+                </div>
+            </div>
+        
+        </div>
+    
+    </div>
+
+    <!-- featured categories-->
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="../assets/images/categories/cat1.jpg" alt="category1">
+                </div>
+                <div class="col-3">
+                    <img src="../assets/images/categories/cat2.jpg" alt="category2">
+                </div>
+                <div class="col-3">
+                    <img src="../assets/images/categories/cat3.jpg" alt="category3">
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <!-- featured products-->
+    <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4" *ngFor="let product of products">
+                <a routerLink="/product-details"><img src="{{ product.imageUrl }}" id="product-img" width="100%"></a>
+                <a routerLink="/product-details"><h4>{{product.name}}</h4></a>
+                <div class="rating">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+                <p>{{product.unitPrice | currency:'USD'}}</p>
+                <a class="btn" (click)="addToCart()">Add To Cart</a>
+            </div>
+        </div>
+        <h2 class="title">latest Products</h2>
+        <div class="row">
+            <div class="col-4" *ngFor="let product of products">
+                <a routerLink="/product-details"><img src="{{ product.imageUrl }}" id="product-img" width="100%"></a>
+                <a routerLink="/product-details"><h4>{{product.name}}</h4></a>
+                <div class="rating">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+                <p>{{product.unitPrice | currency:'USD'}}</p>
+                <a class="btn" (click)="addToCart()">Add To Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- offer -->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="../assets/images/products/offer.png" alt="" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively Available on ShopBag</p>
+                    <h1>Hermes Birkin</h1>
+                    <p class="offer-description">Embrace timeless elegance with our Hermes Birkin 30 cm handbag, crafted in luxurious orange Sanguine ostrich leather. 
+                        Elevate your style with the epitome of sophistication and fashion-forward allure.</p>
+                    <a class="btn" routerLink="/product-details">Buy Now &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ***** Testimonial *****-->
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <span class="material-symbols-outlined quote">format_quote</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, maiores quia pariatur
+                         vel quas perferendis dolore deleniti repellendus.
+                    </p>
+                    <div class="rating">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <img src="../assets/images/users/user1.png" alt="">
+                    <h3>Caroline Wallt</h3>
+                </div>
+                <div class="col-3">
+                    <span class="material-symbols-outlined quote">format_quote</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, maiores quia pariatur
+                         vel quas perferendis dolore deleniti repellendus.
+                    </p>
+                    <div class="rating">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <img src="../assets/images/users/user2.jpg" alt="">
+                    <h3>Georgina Parkt</h3>
+                </div>
+                <div class="col-3">
+                    <span class="material-symbols-outlined quote">format_quote</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, maiores quia pariatur
+                         vel quas perferendis dolore deleniti repellendus.
+                    </p>
+                    <div class="rating">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <img src="../assets/images/users/user3.png" alt="">
+                    <h3>Murielle Polet</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ***** Brand *****-->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="../assets/images/logo/logo-v1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

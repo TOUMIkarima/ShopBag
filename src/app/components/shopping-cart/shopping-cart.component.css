@@ -1,0 +1,50 @@
+@import "../../app.component.css";
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.items {
+    margin-top: 10px;
+}
+
+.custom-row {
+    display: flex;
+    align-items: center;
+}
+
+.custom-btn {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff523b;
+    color: #fff;
+    
+}
+
+.custom-alert {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffc107;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 4px;
+    margin-bottom: 20%;
+}
+.checkout-btn {
+    border-color: #ff523b;
+    border: 3px solid #ff523b;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 4px;
+}

@@ -1,0 +1,51 @@
+<div class="home-container">
+
+    <div class="container">
+    
+        <app-navbar></app-navbar>
+    
+    </div>
+
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>All Products</h2>
+            <select name="" id="">
+                <option value="">Default Sorting</option>
+                <option value="">Sort by price</option>
+                <option value="">Sort by popularity</option>
+                <option value="">Sort by rating</option>
+                <option value="">Sort by sale</option>  
+
+            </select>
+        </div>
+        <!-- 3 row => 12 products -->
+        <div class="row">
+            <div class="col-4" *ngFor="let product of products">
+                <a routerLink="/product-details"><img src="{{ product.imageUrl }}" id="product-img" width="100%"></a>
+                <a routerLink="/product-details"><h4>{{product.name}}</h4></a>
+                <div class="rating">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="material-symbols-outlined">star</span>
+                </div>
+                <p>{{product.unitPrice | currency:'USD'}}</p>
+                <a class="btn" (click)="addToCart()">Add To Cart</a>
+            </div>
+        </div>
+
+        <!-- pagination -->
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div>
+
+
+    </div>
+
+</div>
+
